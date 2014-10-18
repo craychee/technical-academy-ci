@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+
+<title>Palantir.net - Technical Academy CI Training</title>
+
+<meta name="description" content="An introduction Continuous Integration">
+<meta name="author" content="Michelle Krejci">
+
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<link rel="stylesheet" href="css/reveal.min.css">
+<link rel="stylesheet" href="css/theme/night.css" id="theme">
+
+<!-- For syntax highlighting -->
+<link rel="stylesheet" href="lib/css/zenburn.css">
+
+<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+<script>
+document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+</script>
+
+<!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<div class="reveal">
+
+  <!-- Any section element inside of this container is displayed as a slide -->
+  <div class="slides">
+
+    <!-- Introduction -->
+    <section>
+      <section>
+        <h1 style="text-align: right;" class="fragment"><font color=#f08>++</font> Continuous Integration</h1>
+        <h2 style="text-align: right;" class="fragment roll-in"><strong>do it <font color=#f08>yourself</font></strong></h2>
+        <h2 style="text-align: right;" class="fragment roll-in"><strong>do it <font color=#f08>now.</font></strong></h2>
+      </section>
+      <section data-background="#0062A0">
+      <h2 style="text-align: center;" class="fragment"><font color=#F57E20>What</font> CI means.</h2>
+      <h2 style="text-align: center;" class="fragment"><font color=#F57E20>Why</font> it is important.</h2>
+      <h2 style="text-align: center;" class="fragment"><font color=#F57E20>How</font> to make it happen.</h2>
+      </section>
+    </section>
+
+    <!-- Introductions  -->
+    <section>
+      <section data-background="#F08">
+        <h1 style="text-align: center;">Why you should trust me...</h1>
+        <small class="fragment">* you shouldn't. You should read books like "Continuous Delivery".</small>
+      </section>
+      <section data-background="#0062A0">
+        <h1 style="text-align: center;">Michelle Krejci</h1>
+        <h3 style="text-align: center;">Engineer</h3>
+        <p>Twitter: <strong>@dev_meshev</strong></p>
+      </section>
+      <section data-background="#F57E20">
+        <h1 style="text-align: left;">Who are <font color=#f08>you</font>?</h1>
+      </section>
+      <section data-background="#F57E20">
+        <h3 class="fragment" style="text-align: left;"><font color=#0062A0>a.) </font><font color=#000000> "I have heard the phrase 'continuous integration' but haven't decided if I should care."</font></h3>
+        <h3 class="fragment" style="text-align: left;"><font color=#0062A0>b.) </font><font color=#000000> "I am sold on CI and want to know where to start."</font></h3>
+        <h3 class="fragment" style="text-align: left;"><font color=#0062A0>c.) </font><font color=#000000> "My CI set up is pretty sweet and I want to feel smug about how much better I am doing it."</font></h3>
+        <h3 class="fragment" style="text-align: left;"><font color=#0062A0>d.) </font><font color=#000000> "I have no idea what we are talking about."</font></h3>
+      </section>
+      <section>
+        <h1><font color=#ff0000>WARNING</font></h1>
+        <h2>This presentation is not yet completed.</h2>
+      </section>
+     </section>
+
+    <!-- What CI isn't.  -->
+    <section>
+      <section>
+        <h2 style="text-align: left;">back to that continuous...</h2>
+        <h1 class="fragment" class="fragment grow"><font color=#f08>what</font>?</h1>
+      </section>
+      <section>
+        <h1>CI is often portrayed in terms of:</h1>
+          <p class="fragment"><img src="http://docs.seleniumhq.org/images/big-logo.png" style="border-style: none"></p>
+      </section>
+      <section>
+        <h1>Or</h1>
+          <p class="fragment"><img src="uploads/jenkins-logo.png" style="border-style: none"></p>
+      </section>
+      <section>
+        <h1>Or</h1>
+          <p class="fragment"><img src="http://img3.wikia.nocookie.net/__cb20110609163507/gyropedia/images/thumb/e/e8/PinkieShrug.png/180px-PinkieShrug.png" style="border-style: none"></p>
+      </section>
+      <section>
+          <h2>When I first started</h2>
+          <h2>trying to <font color=#F57E20>do</font> CI</h2>
+          <h2>I started by</h2>
+          <h2><font color=#F57E20>collecting</font> CI tools.</h2>
+      </section>
+      <section>
+        <h3 style="text-align: left;">Do not do this.</h3>
+      </section>
+      <section data-background="uploads/toy-box.jpg">
+        <h2 style="text-align: left;">You will get lost.<h2>
+      </section>
+      <section data-background="uploads/toy-box-grayscaled.jpg">
+      <h2 style="text-align: left;"><font color=#f08>Continuous</font></h2>
+      <h2 style="text-align: left;"><font color=#f08>Integration</font></h2>
+      <h2 style="text-align: left;"><font color=#f08>is not about cool toys.</font></h2>
+      </section>
+      <section>
+        <h1 style="text-align: left;">Continuous integration is a <font color=#0062A0>process</font>.</h1>
+      </section>
+    </section>
+
+    <!-- What CI is.  -->
+    <section>
+      <section data-background="#0062A0">
+        <h2 style="text-align: left;">continuous integration means...</h2>
+      </section>
+      <section data-background="#0062A0">
+        <h2 style="text-align: center;" class="fragment">Finding opportunities to</h2>
+        <h2 style="text-align: center;" class="fragment">inject</h2>
+        <h2 style="text-align: center;" class="fragment">small bits of</h2>
+        <h2 style="text-align: center;" class="fragment"><font color=#f08>Quality Assurance</font></h2>
+        <h2 style="text-align: center;" class="fragment">into the development process</h2>
+        <h2 style="text-align: center;" class="fragment">at <p class="fragment grow"><font color=#F57E20>every</font></p> stage.</h2>
+      </section>
+      <section data-background="#0062A0">
+        <h1 style="text-align: right;">That's it.</h1>
+      </section>
+      <section>
+        <h1 style="text-align: center;" ><font color=#f08>LMGTFY</font></h1>
+      </section>
+
+    <!-- Why CI?-->
+      <section data-background="#ffffff">
+         <img src="uploads/katamari.png" style="border-style: none">
+      </section>
+     </section>
+
+    <!-- How do you do CI? -->
+    <section>
+      <section data-background="#F57E20">
+        <h2 style="text-align: left;">How does one CI?</h2>
+      </section>
+       <section data-background="#F57E20" data-transition="linear" data-background-transition="slide">
+        <h3 style="text-align: left;" class="fragment"><font color=#0062A0>source control</font></h1>
+        <h3 style="text-align: left;" class="fragment"><font color=#0062A0>environment control</font></h1>
+        <h3 style="text-align: left;" class="fragment"><font color=#0062A0>automated testing</font></h1>
+        <h3 style="text-align: left;" class="fragment"><font color=#0062A0>deployment control</font></h1>
+        <h3 style="text-align: right;" class="fragment"><font color=#0062A0>git</font></h1>
+        <h3 style="text-align: right;" class="fragment"><font color=#0062A0>vagrant</font></h1>
+        <h3 style="text-align: right;" class="fragment"><font color=#0062A0>behat</font></h1>
+        <h3 style="text-align: right;" class="fragment"><font color=#0062A0>travis</font></h1>
+      </section>
+    </section>
+
+    <!-- How do you do CI? -->
+    <section>
+      <h2>Ask Away!</h2>
+      <p>&nbsp;</p>
+      <h2>Look at MOAR Resources!</h2>
+      <ul>
+        <li><a href="http://www.vagrantup.com/">Vagrant</a> (http://www.vagrantup.com/)</li>
+        <li><a href="https://github.com/promet/drupal_cookbook">Drupal Cookbook</a> (https://github.com/promet/drupal_cookbook)</li>
+        <li><a href="http://phpunit.de/manual/3.7/en/installation.html">PHPUnit</a> (http://phpunit.de/manual/3.7/en/installation.html)</li>
+        <li><a href="http://jenkins-ci.org/">Jenkins</a> (http://jenkins-ci.org/)</li>
+        <li><a href="https://drupal.org/node/670460">Using drush to synchronize and deploy sites</a> (https://drupal.org/node/670460)</li>
+        <li><a href="https://github.com/generalredneck/headless-selenium">Headless Selenium</a> (https://github.com/generalredneck/headless-selenium)</li>
+        <li><a href="http://behat.org/">Behat</a> (http://behat.org/)</li>
+        <li><a href="http://dspeak.com/drupalextension/drupalapi.html">Behat extension for Drupal</a> (http://dspeak.com/drupalextension/drupalapi.html)</li>
+        <li><a href="http://phantomjs.org/">PhantomJS</a> (http://phantomjs.org/)</li>
+        <li><a href="http://www.phpspec.net/">phpspec</a> (http://www.phpspec.net/)</li>
+      </ul>
+    </section>
+  </div>
+
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.min.js"></script>
+
+<script>
+
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+  progress: true,
+  history: true,
+  center: true,
+  backgroundTransition: 'slide',
+
+  theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+  transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+  // Optional libraries used to extend on reveal.js
+  dependencies: [
+    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+    { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+    { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+    { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+  ]
+});
+
+</script>
+
+</body>
+</html>
