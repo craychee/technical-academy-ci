@@ -4,7 +4,7 @@
 
 ------------
 * [virtualBox](https://www.virtualbox.org/wiki/Downloads) >= 4.3.x
-* [vagrant](http://downloads.vagrantup.com/) >= 1.6.x
+* [vagrant](https://www.vagrantup.com/downloads.html) >= 1.6.x
 
 ## Getting Started
 
