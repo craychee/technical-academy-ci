@@ -1,4 +1,3 @@
-@api @javascript
 Feature: CI presentation.
   As a the CI presenter,
   I want to be able to clearly present the basics of CI
