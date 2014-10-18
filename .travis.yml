@@ -3,7 +3,7 @@ before_script:
 - sudo apt-get update > /dev/null
 - sudo apt-get install -y -q --force-yes apache2
 - echo "127.0.0.1 continuous-integration.dev" | sudo tee -a /etc/hosts
-- build/vagrant.sh
+- sudo build/vagrant.sh
 - composer self-update
 - composer install --dev --prefer-dist
 - sudo chown -R travis:www-data www
