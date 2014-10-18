@@ -3,8 +3,11 @@ before_script:
 - sudo apt-get update > /dev/null
 - sudo apt-get install -y -q --force-yes apache2
 - echo "127.0.0.1 continuous-integration.dev" | sudo tee -a /etc/hosts
-- build/vagrant.sh
+- sudo build/vagrant.sh
+- sudo sed -e "s?%TRAVIS_BUILD_DIR%?$(pwd)/www?g" --in-place /etc/apache2/sites-available/default
+- sudo phantomjs --webdriver=8643 &>/dev/null &
+- sudo service apache2 restart
 - composer self-update
 - composer install --dev --prefer-dist
 - sudo chown -R travis:www-data www
-script: bin/behat --tags "~@skip" -f pretty,html --out ,out.html
+script: bin/behat -pretty,html --out ,out.html
