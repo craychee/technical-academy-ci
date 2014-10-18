@@ -10,4 +10,4 @@ before_script:
 - composer self-update
 - composer install --dev --prefer-dist
 - sudo chown -R travis:www-data www
-script: bin/behat -pretty,html --out ,out.html
+script: bin/behat --config behat.yml -pretty,html --out ,out.html
