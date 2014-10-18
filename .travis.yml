@@ -1,0 +1,12 @@
+language: php
+php:
+- 5.5
+before_script:
+- echo "127.0.0.1 continuous-integration.dev" | sudo tee -a /etc/hosts
+- build/vagrant.sh
+- composer self-update
+- composer install --dev --prefer-dist
+- sudo chown -R travis:www-data www
+script: bin/behat --tags "~@skip" -f pretty,html --out ,out.html
+cache:
+  apt: true
