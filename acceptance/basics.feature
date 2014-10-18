@@ -7,3 +7,5 @@ Feature: CI presentation.
 Scenario:
     Given I am on "#/1"
     Then I should see text matching "Why you should trust me"
+    Given I am on "#/2"
+    Then I should see text matching "back to that"
