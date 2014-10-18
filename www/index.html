@@ -63,7 +63,7 @@ document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.se
         <p>Twitter: <strong>@dev_meshev</strong></p>
       </section>
       <section data-background="#F57E20">
-        <h1 style="text-align: left;">Who are <font color=#f08>you</font>?</h1>
+      <h1 style="text-align: left;">Who are <font color=#f08 class="fragment grow">you</font>?</h1>
       </section>
       <section data-background="#F57E20">
         <h3 class="fragment" style="text-align: left;"><font color=#0062A0>a.) </font><font color=#000000> "I have heard the phrase 'continuous integration' but haven't decided if I should care."</font></h3>
@@ -79,9 +79,9 @@ document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.se
 
     <!-- What CI isn't.  -->
     <section>
-      <section>
-        <h2 style="text-align: left;">back to that continuous...</h2>
-        <h1 class="fragment" class="fragment grow"><font color=#f08>what</font>?</h1>
+      <section data-background="#F08">
+        <h1 style="text-align: center;">continuous integration is...</h1>
+        <h1 class="fragment grow"><font color=#0062A0>what</font>?</h1>
       </section>
       <section>
         <h1>CI is often portrayed in terms of:</h1>
@@ -136,8 +136,20 @@ document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.se
       <section>
         <h1 style="text-align: center;" ><font color=#f08>LMGTFY</font></h1>
       </section>
+      <section>
+        <h1 style="text-align: right;" class="fragment">What about...</h1>
+        <h2 style="text-align: right;" class="fragment roll-in"><strong>continuous <font color=#f08>delivery</font>?</strong></h2>
+        <h2 style="text-align: right;" class="fragment roll-in"><strong>continuous <font color=#f08>deployment</font>?</strong></h2>
+        <h2 style="text-align: right;" class="fragment roll-in"><strong>continuous <font color=#f08>design</font>?</strong></h2>
+      </section>
 
     <!-- Why CI?-->
+      <section data-background="#F08">
+        <h1 style="text-align: center;">prepare yourself for my one</h1>
+        <h1 class="fragment grow"><font color=#0062A0>why</font>?</h1>
+        <h1 style="text-align: center;">slide.</h1>
+        <small class="fragment">* I mean it. You should read books like "Continuous Delivery."</small>
+      </section>
       <section data-background="#ffffff">
          <img src="uploads/katamari.png" style="border-style: none">
       </section>
@@ -146,17 +158,19 @@ document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.se
     <!-- How do you do CI? -->
     <section>
       <section data-background="#F57E20">
-        <h2 style="text-align: left;">How does one CI?</h2>
+        <h1 class="fragment grow"><font color=#0062A0>How</font></h1>
+        <h1 style="text-align: center;">does one CI?</h1>
+        <small class="fragment">* Okay, fine. We are going to discuss some cool toys.</small>
       </section>
        <section data-background="#F57E20" data-transition="linear" data-background-transition="slide">
-        <h3 style="text-align: left;" class="fragment"><font color=#0062A0>source control</font></h1>
-        <h3 style="text-align: left;" class="fragment"><font color=#0062A0>environment control</font></h1>
-        <h3 style="text-align: left;" class="fragment"><font color=#0062A0>automated testing</font></h1>
-        <h3 style="text-align: left;" class="fragment"><font color=#0062A0>deployment control</font></h1>
-        <h3 style="text-align: right;" class="fragment"><font color=#0062A0>git</font></h1>
-        <h3 style="text-align: right;" class="fragment"><font color=#0062A0>vagrant</font></h1>
-        <h3 style="text-align: right;" class="fragment"><font color=#0062A0>behat</font></h1>
-        <h3 style="text-align: right;" class="fragment"><font color=#0062A0>travis</font></h1>
+        <h3 style="text-align: left;" class="fragment"><font color=#0062A0>source</font> control</h1>
+        <h3 style="text-align: left;" class="fragment"><font color=#0062A0>environment</font> control</h1>
+        <h3 style="text-align: left;" class="fragment"><font color=#0062A0>behavior-driven</font> testing</h1>
+        <h3 style="text-align: left;" class="fragment"><font color=#0062A0>deployment & testing</font> automation</h1>
+        <h3 style="text-align: right;" class="fragment"><font color=#0062A0>git</font> > </h1>
+        <h3 style="text-align: right;" class="fragment"><font color=#0062A0>vagrant</font> > </h1>
+        <h3 style="text-align: right;" class="fragment"><font color=#0062A0>behat</font> > </h1>
+        <h3 style="text-align: right;" class="fragment"><font color=#0062A0>travis</font> > </h1>
       </section>
     </section>
 
@@ -191,8 +205,10 @@ document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.se
 // https://github.com/hakimel/reveal.js#configuration
 Reveal.initialize({
   progress: true,
+  controls: false,
   history: true,
   center: true,
+  fragments: true,
   backgroundTransition: 'slide',
 
   theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
