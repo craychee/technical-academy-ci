@@ -12,3 +12,17 @@ fi
 
 [[ -z `which firefox` ]] && apt-get update -y && apt-get install -q -y iceweasel || true
 /opt/phantomjs --webdriver=8643 &> /dev/null &
+
+echo "<VirtualHost *:80>
+        ServerAdmin webmaster@continuous-integration.dev
+        ServerName continuous-integration.dev
+
+        DocumentRoot /var/www/sites/continuous-integration.dev/www/
+        <Directory /var/www/sites/continuous-integration.dev/www/>
+                Options Indexes FollowSymLinks MultiViews
+                AllowOverride None
+                Order allow,deny
+                allow from all
+        </Directory>
+</VirtualHost>" >> /etc/apache2/conf.d/continuous-integration.dev.conf
+/etc/init.d/apache2 restart
