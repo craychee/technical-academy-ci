@@ -2,6 +2,9 @@
 
 project=$1
 
+[[ -z `which php5` ]] && apt-get update -y && apt-get install -q -y php5 || true
+[[ -z `which php5-curl` ]] && apt-get update -y && apt-get install -q -y php5-curl || true
+
 [[ -z `which composer` ]] && curl -sS https://getcomposer.org/installer | php && cp composer.phar /usr/bin/composer && rm composer.phar || true
 [[ -z `which git` ]] && sudo apt-get install git -y || true
 if [[ ! -f /opt/phantomjs ]]
